@@ -1,0 +1,28 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h3>Dang ky</h3>
+    @ViewBag.error
+    <form method="post" asp-controller="home" asp-action="DangkyUser">
+        <table border="0" cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Dang ky"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

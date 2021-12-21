@@ -1,0 +1,46 @@
+﻿`@{
+    ViewData["Title"] = "ds hoc sinh";
+    string[] TableHeader = new string[] {"ID",
+          "Name",
+          "Adress","DiemTB","Class"};
+
+}
+
+<div class="table">
+    <form action="/home/SearchStudent" method="get">
+        <table>
+            <thead>
+                <tr>
+                    @{
+                        foreach (var head in TableHeader)
+                        {
+                            <th>
+                                @head
+                            </th>
+                        }
+                    }
+                </tr>
+            </thead>
+
+            <tbody>
+                @{
+                    if (Model != null)
+                    {
+                        foreach (var Data in Model)
+                        {
+                            <tr>
+                                <td>@Data.ID</td>
+                                <td>@Data.Name</td>
+                                <td>@Data.Adress</td>
+                                <td>@Data.DiemTB</td>
+                                <td>@Data.Class</td>
+                            </tr>
+                        }
+
+                    }
+                }
+            </tbody>
+        </table>
+    </form>
+
+</div>

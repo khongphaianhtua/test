@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "ds hoc sinh";
+    string[] TableHeader = new string[] {"ID",
+          "Name",
+          "Adress","DiemTB","Class"};
+
+}
+
+<h2>sua  sinh vien</h2>
+
+<div class="">
+    <form  action="/home/UpdateStudent" method="post">
+
+        <div class="">
+            <label>
+                ID : 
+            </label>
+
+              @*  @{
+                    if (Model != null)
+                    {
+                        foreach (var a in Model)
+                        {   
+                            <tr>
+                                <td>@a.ID</td>
+                            </tr>
+
+
+                        }
+
+                    }
+                }*@
+            <input type="text" name="id" />
+
+        </div>
+        <div class="">
+            <label>
+                Name
+            </label>
+
+            <input type="text" name="Name" value="" />
+        </div>
+        <div class="">
+            <label>
+                Adress
+            </label>
+
+            <input type="text" name="Adress" value="" />
+        </div>
+        <div class="">
+            <label>
+                DiemTB
+            </label>
+
+            <input type="number" name="DiemTB" value="" />
+        </div>
+        <div class="">
+            <label>
+                Class
+            </label>
+
+            <input type="text" name="Class" value="" />
+        </div>
+
+        <input type="submit" name="" value="update">
+    </form>
+</div>
+
+<style>
+  @*  input {
+        background-color: #ff0000;
+        width: 100px;
+        height: 30px;
+    }*@
+</style>

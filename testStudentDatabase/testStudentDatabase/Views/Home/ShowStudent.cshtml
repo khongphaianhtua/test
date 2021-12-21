@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "ds hoc sinh";
+    string[] TableHeader = new string[] {"ID",
+          "Name",
+          "Adress","DiemTB","Class"};
+
+}
+<div class="table">
+    <table>
+        <thead>
+            <tr>
+                @{
+                    foreach (var head in TableHeader)
+                    {
+                        <th>
+                            @head
+                        </th>
+                    }
+                }
+            </tr>
+        </thead>
+
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (var Data in Model)
+                    {
+                        <tr>
+                            <td>@Data.ID</td>
+                            <td>@Data.Name</td>
+                            <td>@Data.Adress</td>
+                            <td>@Data.DiemTB</td>
+                            <td>@Data.Class</td>
+                            <td>
+                                <a asp-action="Create" asp-route-id="@Data.ID">Sửa</a> |
+                                <a asp-action="Details" asp-route-id="@Data.ID">Chi tiết</a> |
+                                <a asp-action="Delete" asp-route-id="@Data.ID">Xóa</a>
+                            </td>
+
+                        </tr>
+
+
+                    }
+
+                }
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "ds hoc sinh";
+    string[] TableHeader = new string[] {"ID",
+          "Name",
+          "Adress","DiemTB","Class"};
+
+}
+
+
+
+<h2>Danh sach sinh vien</h2>
+<div>
+    <form action="/home/logout" method="post">
+        <input type="submit" value="logout"/>
+
+
+    </form>
+</div>
+@ViewBag.error
+<div >
+    <form action="/home/">
+        <table>
+
+            <tr>
+                <input type="search" name="id" />
+            </tr>
+            <tr>
+                <input asp-action="Search" type="submit" value="search" />
+            </tr>
+
+
+
+        </table> <input style="right:100px;" asp-action="Create" type="submit" name="" value="them">
+    </form>
+    
+</div>
+<div class="dssv">
+    <form action="">
+        <table>
+            <thead>
+                <tr>
+                    @{
+                        foreach (var head in TableHeader)
+                        {
+                            <th>
+                                @head
+                            </th>
+                        }
+                    }
+                </tr>
+            </thead>
+
+            <tbody>
+                @{
+                    if (Model != null)
+                    {
+                        foreach (var Data in Model)
+                        {
+                                <tr>
+                                    <td>@Data.ID</td>
+                                    <td>@Data.Name</td>
+                                    <td>@Data.Adress</td>
+                                    <td>@Data.DiemTB</td>
+                                    <td>@Data.Class</td>
+                                    <td>
+                                        <a asp-action="update" asp-route-id="@Data.ID">Sửa</a> |
+                                        <a asp-action="DeleteStudent" asp-route-id="@Data.ID">Xóa</a>
+                                    </td>
+
+                                </tr>
+
+
+                        }
+
+                    }
+                }
+            </tbody>
+        </table>
+    </form>
+   
+</div>
+<style>
+
+table{
+
+}
+    tr, td, th {
+        padding: 5px;
+        border: 1px solid #000000;
+    }
+</style>
+
+
