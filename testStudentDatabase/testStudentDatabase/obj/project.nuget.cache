@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lMvt9Ow3pRRBezkT8Vbs61o2EFPhehHdRpgPIL3LEyDHIeZmp4ya/UoXrnEUbRZaW3IIf3umpAfwCWiRE359Bg==",
+  "dgSpecHash": "d7RdRX4b3urPem+ZvTJzAhswgRIl9r3tPd/fzqf4OMzvK/zjWJ7xVF/IlZe913vHi37G3SNsXcF1ORnnTt9NJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\os\\source\\repos\\testStudentDatabase\\testStudentDatabase\\testStudentDatabase.csproj",
+  "projectFilePath": "C:\\Users\\os\\Desktop\\test\\testStudentDatabase\\testStudentDatabase\\testStudentDatabase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\os\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\os\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
